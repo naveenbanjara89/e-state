@@ -1,12 +1,12 @@
 import React from 'react'
-import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
+import Header from './Components/Header'
 
 const App = () => {
   return (
-    <div>
-      <NavBar/>
+    <div className='w-full overflow-hidden '>
       <Footer/>
+      <Header/>
     </div>
   )
 }
