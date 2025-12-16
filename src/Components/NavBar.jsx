@@ -22,10 +22,10 @@ const NavBar = () => {
         <div className='conatiner mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent '>
             <img className='cursor-pointer px-9' src={assets.logo} alt="" />
             <ul className=' hidden md:flex gap-7 px-3  text-white mr-22 '>
-                <a href='#header' className='cursor-pointer hover:text-gray-400  '>Home</a>
-                <a href='#header' className='cursor-pointer hover:text-gray-400  '>About</a>
-                <a href='#header' className='cursor-pointer hover:text-gray-400  '>Projects</a>
-                <a href='#header' className='cursor-pointer hover:text-gray-400  '>Testimonials</a>
+                <a href='#Header' className='cursor-pointer hover:text-gray-400  '>Home</a>
+                <a href='#About' className='cursor-pointer hover:text-gray-400  '>About</a>
+                <a href='#Projects' className='cursor-pointer hover:text-gray-400  '>Projects</a>
+                <a href='#Testimonials' className='cursor-pointer hover:text-gray-400  '>Testimonials</a>
             </ul>
             {/* <button className=' hidden md:block bg-white cursor-pointer  px-8 py-2 rounded-full  '>Sing Up</button> */}
             <img className='w-5 md:block invert mr-20  cursor-pointer hover:invert brightness-0 hover:scale-110 hover:opacity-80 transition duration-200 ' src={assets.profile_icon} alt=''/>
