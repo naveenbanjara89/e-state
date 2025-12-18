@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <div className='absolute top-0 left-0 w-full z-10'>
         <div className='conatiner mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent '>
-            <img className='cursor-pointer px-9' src={assets.logo} alt="" />
+            <a href='/'><img className='cursor-pointer px-9' src={assets.logo} alt="" /></a>
             <ul className=' hidden md:flex gap-7 px-3  text-white mr-22 '>
                 <a href='#Header' className='cursor-pointer hover:text-gray-400  '>Home</a>
                 <a href='#About' className='cursor-pointer hover:text-gray-400  '>About</a>
