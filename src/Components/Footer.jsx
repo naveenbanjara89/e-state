@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {assets} from '../assets/assets'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { toast } from 'react-toastify'
 
 const Footer = () => {
+
+  const [email, setEmail] = useState('')
+
+  const handleSubscribe = () => {
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+  if (!email) {
+    toast.error('Please enter an email')
+    return
+  }
+
+  if (!emailRegex.test(email)) {
+    toast.error('Please enter a valid email address')
+    return
+  }
+
+  toast.success('🎉 Thanks for subscribing!')
+  setEmail('')
+  }
   
   return (
     <motion.div 
@@ -32,8 +53,8 @@ const Footer = () => {
           <h3 className='text-white text-lg font-bold mb-4'>Subscribe to our newsletter</h3>
           <p className='mt-4 text-gray-400'>The latest news, articles, and resources, sent to your inbox weekly.</p>
           <div>
-            <input type="email" placeholder='Enter your email' className='border border-gray-800 text-gray-400 mt-4 rounded p-2 bg-gray-800 focus:outline-none w-full md:w-auto ' />
-            <button className='py-2 mx-2 px-4 rounded bg-blue-600 cursor-pointer hover:bg-blue-500 mt-5 text-white'>Subscribe</button>
+            <input type="email" placeholder='Enter your email'  value={email} onChange={(e) => setEmail(e.target.value)} className='border border-gray-800 text-gray-400 mt-4 rounded p-2 bg-gray-800 focus:outline-none w-full md:w-auto ' />
+            <button onClick={handleSubscribe} className='py-2 mx-2 px-4 rounded bg-blue-600 cursor-pointer hover:bg-blue-500 mt-5 text-white'>Subscribe</button>
           </div>
         </div>
       </div>
