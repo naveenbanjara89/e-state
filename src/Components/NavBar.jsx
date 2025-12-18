@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {assets} from '../assets/assets'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
 
@@ -28,7 +29,7 @@ const NavBar = () => {
                 <a href='#Testimonials' className='cursor-pointer hover:text-gray-400  '>Testimonials</a>
             </ul>
             {/* <button className=' hidden md:block bg-white cursor-pointer  px-8 py-2 rounded-full  '>Sing Up</button> */}
-            <img className='w-5 md:block invert mr-20  cursor-pointer hover:invert brightness-0 hover:scale-110 hover:opacity-80 transition duration-200 ' src={assets.profile_icon} alt=''/>
+            <Link ><img className='w-5 md:block invert mr-20  cursor-pointer hover:invert brightness-0 hover:scale-110 hover:opacity-80 transition duration-200 ' src={assets.profile_icon} alt=''/></Link>
             <img onClick={()=>setShowMobileMenu(true)}  src={assets.menu_icon} className='md:hidden w-7 cursor-pointer' alt="" />
         </div>
         {/*  -----------------------------mobile menu----------------------------------------------- */}
