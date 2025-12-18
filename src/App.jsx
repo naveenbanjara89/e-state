@@ -1,22 +1,16 @@
 import React from 'react'
-import Footer from './Components/Footer'
-import Header from './Components/Header'
-import About from './Pages/About'
-import Projects from './Pages/Projects'
-import Testimonials from './Pages/Testimonials'
-import Contact from './Pages/Contact'
-import { ToastContainer } from 'react-toastify';
+import Login from './Pages/Login'
+import { Routes,Route } from 'react-router-dom'
+import HomePage from './Pages/HomePage'
 
 const App = () => {
   return (
     <div className='w-[100%] overflow-hidden '>
-      <ToastContainer/>
-      <Header/>
-      <About/>
-      <Projects/>
-      <Testimonials/>
-      <Contact/>
-      <Footer/>
+      
+      <Routes>
+        <Route path='/' element={<HomePage/>} />
+        <Route path='/login' element={<Login/>} />
+      </Routes>
     </div>
   )
 }
